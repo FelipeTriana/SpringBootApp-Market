@@ -9,5 +9,4 @@ JPA, SpringData and in the code you can see our first connection to the database
 
 I will be updating this README.md with new changes while i'm doing the course 
 
-:squirrel: :squirrel: :squirrel: :squirrel: :squirrel: :squirrel: :squirrel: :squirrel: :squirrel: :squirrel: :squirrel: :squirrel: :squirrel: :squirrel: :squirrel:
-/play secret
+:alien: :alien: :alien: :alien: :alien: :alien: :alien: :alien: :alien: :alien: :alien: :alien: :alien: :alien: :alien: :alien: 
