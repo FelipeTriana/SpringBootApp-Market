@@ -8,8 +8,8 @@ that have been used later in /src/main/java/com/platzi/market/persistence/Produc
  - They save too much code and implementation time.
  - They are operations in the database where we will not have to write code.
  - Repositories of Spring Data:
-  - CrudRepository
-  - PagingAndSortingRepository
-  - JPARepository
+  1. CrudRepository (Operations of crud)
+  2. PagingAndSortingRepository
+  3. JPARepository
   
 
