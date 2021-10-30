@@ -8,14 +8,14 @@ import java.util.List;
 public class Categoria {
 
     @Id
-    @GeneratedValue( strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_categoria")
     private Integer idCategoria;
 
     private String descripcion;
     private Boolean estado;
 
-    @OneToMany(mappedBy = "categoria" ) //The attribute that is mapping the relation in Producto entity is categorias
+    @OneToMany(mappedBy = "categoria") //The attribute that is mapping the relation in Producto entity is categorias
     private List<Producto> productos;
 
     public Integer getIdCategoria() {
