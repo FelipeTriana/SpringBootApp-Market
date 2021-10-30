@@ -15,4 +15,5 @@ public interface ProductoCrudRepository extends CrudRepository<Producto, Integer
 
     //Specifically products that are running out(Se estan agotando) and that are active
     Optional<List<Producto>> findByCantidadStockLessThanAndEstado(int cantidadStock, boolean estado);
+
 }
