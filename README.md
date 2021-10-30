@@ -24,4 +24,7 @@ that have been used later in /src/main/java/com/platzi/market/persistence/Produc
  - findById**Category**OrderBy**Name**Asc(int idCategory)
  
  Note: Is very important to respect the camel case in the methods
+ 
+ Documentation:
+ https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods
 
