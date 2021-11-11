@@ -54,7 +54,25 @@ Ojo: Tambien se especifican los atributos presentes en los entity que no seran m
 Finalmente es importante resaltar que los objetos de dominio son muy importantes dentro de nuestra aplicacion pues son los encargados de llevar toda la logica de nuestro negocio.
 
 
+# Inyeccion de dependencias 
 
+El principio de inyeccion de dependencias consiste en pasar la dependencia a la clase que la va utilizar en lugar de crearla internamente dentro de la clase. Esto
+se hace con el fin de no acoplar la clase a la implementacion que esta utilizando. 
+
+Para entender el principio de inyeccion de dependencias en Spring primero hay que entender el concepto de Inversión de Control(IoC) que se refiere a que es el
+framework quien toma el control de los objetos. 
+Spring tiene un contenedor de IoC el cual se encarga de administrar y crear instancias de objetos que se conocen como Beans o Components, alli Spring utiliza la notacion **@Autowired** para hacer inyeccion de dependencias.
+
+
+## Inyeccion de dependencias en el codigo
+
+Si nos fijamos en nuestro **ProductoRepository** estamos utilizando un par de atributos: **private ProductoCrudRepository productoCrudRepository** y **private ProductMapper mapper** que estamos declarando pero en ningun momento estamos instanciando o inicializando por lo que sin la notacion **@Autowired** ese par de atributos tienen valor nulo(Porque en java necesitamos crear los objetos antes de poderlos utilizar). 
+Por ejemplo: Al buscar con el productoCrudRepository.findAll() nos retornaria un ***NullPointerException***(Basicamente, Null no puede llamar a findAll()).
+
+En ese orden de ideas, con la notacion **@Autowired** Spring nos ayuda a crear estos objetos gracias a su contenedor de inversion de control.
+Cuando escribimos sobre un objeto la notacion **@Autowired** le damos a entender a Spring que se le cedera el control para que cree las instancias de dichos objetos, gracias a esto no debemos preocuparnos por crear objetos manualmente(Lo que seria violar el principio de inyeccion de dependencias).
+
+Ojo: Cuando utilizamos la notacion **@Autowired** debemos estar 100% seguros de que el objeto o el atributo que se inyectara es un componente de Spring, en algunos casos no tenemos explicitamente una anotacion que denote que determinado componente pertenece a Spring, sin embargo, algunos siguen siendo componentes de Spring por ejemplo el **ProductoCrudRepository** a pesar de que no tiene ninguna anotacion de Spring extiende de **CrudRepository** que es un componente de Spring y el **ProductMapper** tiene la anotacion **@Mapper** que no es de Spring sino de MapStruct PERO le estamos indicando que el modelo de componente SI es de spring(**@Mapper(componentModel = "spring", uses = {CategoryMapper.class})**) lo que nos garantiza que podamos utilizar el **@Autowired** con el.
 
 
 
