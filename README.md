@@ -88,6 +88,6 @@ Miremos los tipos que estamos usando en el ProductMapper para realizar los mapeo
 
 A continuacion hay dos ejemplos de la utilizacion del Optional y de una funcion muy importante llamada map cuando realizamos consultas por que reciben parametros a la base de datos:
 
-![img](https://i.imgur.com/gGcrC45.png)
+![img](https://i.imgur.com/e9J3ULb.png)
 
 
