@@ -75,5 +75,19 @@ Cuando escribimos sobre un objeto la notacion **@Autowired** le damos a entender
 Ojo: Cuando utilizamos la notacion **@Autowired** debemos estar 100% seguros de que el objeto o el atributo que se inyectara es un componente de Spring, en algunos casos no tenemos explicitamente una anotacion que denote que determinado componente pertenece a Spring, sin embargo, algunos siguen siendo componentes de Spring por ejemplo el **ProductoCrudRepository** a pesar de que no tiene ninguna anotacion de Spring extiende de **CrudRepository** que es un componente de Spring y el **ProductMapper** tiene la anotacion **@Mapper** que no es de Spring sino de MapStruct PERO le estamos indicando que el modelo de componente SI es de spring(**@Mapper(componentModel = "spring", uses = {CategoryMapper.class})**) lo que nos garantiza que podamos utilizar el **@Autowired** con el.
 
 
+# Clase Optional 
+
+La clase Optional es una caracteristica de Java 8 que funciona como un contenedor o envolvente(Wrapper) de un objeto que puede ser o no ser nulo y nos ayuda a gestionar los NullPointerException. Debido a esto es usualmente utilizado en consultas a la base de datos que nos pueden generar este tipo de errores como las busquedas por id o cualquier otro parametro de busqueda.
+
+## Por ejemplo:
+
+Miremos los tipos que estamos usando en el ProductMapper para realizar los mapeos de la entidad Producto a un Product o lista de Products del dominio:
+
+![img](https://i.imgur.com/Iwt47zT.png)
+
+
+A continuacion hay dos ejemplos de la utilizacion del Optional y de una funcion muy importante llamada map cuando realizamos consultas por que reciben parametros a la base de datos:
+
+![img](https://i.imgur.com/gGcrC45.png)
 
 
