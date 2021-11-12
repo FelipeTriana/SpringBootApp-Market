@@ -81,12 +81,12 @@ La clase Optional es una caracteristica de Java 8 que funciona como un contenedo
 
 ## Por ejemplo:
 
-Miremos los tipos que estamos usando en el ProductMapper para realizar los mapeos de la entidad Producto a un Product o lista de Products del dominio:
+Miremos los tipos que estamos usando en el ProductMapper para realizar los mapeos de la entidad Producto a un Product o de una List<Producto> a una List<Product> del dominio:
 
 ![img](https://i.imgur.com/Iwt47zT.png)
 
 
-A continuacion hay dos ejemplos de la utilizacion del Optional y de una de sus funciones llamada map que nos srive cuando realizamos consultas a la base de datos que reciben parametros de objetos que podrian no existir y por tanto retornarnos un valor null:
+A continuacion hay dos ejemplos de la utilizacion del Optional y de una de sus funciones llamada map que nos sirve cuando realizamos consultas a la base de datos que reciben parametros de objetos que podrian no existir y por tanto retornarnos un valor null:
 
 ![img](https://i.imgur.com/e9J3ULb.png)
 
