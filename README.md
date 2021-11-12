@@ -86,7 +86,7 @@ Miremos los tipos que estamos usando en el ProductMapper para realizar los mapeo
 ![img](https://i.imgur.com/Iwt47zT.png)
 
 
-A continuacion hay dos ejemplos de la utilizacion del Optional y de una desus funciones llamada map que nos srive cuando realizamos consultas a la base de datos que reciben parametros de datos que podrian no existir y retornarnos un valor null:
+A continuacion hay dos ejemplos de la utilizacion del Optional y de una de sus funciones llamada map que nos srive cuando realizamos consultas a la base de datos que reciben parametros de objetos que podrian no existir y por tanto retornarnos un valor null:
 
 ![img](https://i.imgur.com/e9J3ULb.png)
 
