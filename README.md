@@ -1,12 +1,10 @@
-# Java Spring Course :leaves:
+# Curso de Java Spring :leaves:
 
-This project is a complete guide of the course Java Spring in platzi.
+Este proyecto es una guía completa del curso Java Spring en platzi.
 
-## About this :octocat:
+## Acerca del proyecto :octocat:
 
-In each branch of the project you can find something about Spring, for example, in the branch "3.JPA_SpringData_FirstConnection" you cand find a README.md where i describe what is
-JPA, SpringData and in the code you can see our first connection to the database. 
+En cada rama del proyecto se encuentra le teoria con los modulos fundamentales del curso.
 
-I will be updating this README.md with new changes while i'm doing the course 
 
 
