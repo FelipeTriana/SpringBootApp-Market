@@ -1,6 +1,4 @@
-# Spring Boot Configuration
+# Configuracion de Spring 
 
-In this branch we've been working with properties files, this is very useful to config Spring Boot, also we can add new profiles with personalize configurations, in this example
-we've added two new profiles: dev(for development) and pdn(for production), in dev we've changed the application port, now is 8090.
-Important: All profiles share the configuration that we define in the general properties file named application.properties, in this case we changed the context path for: 
-/platzi-market/api
+En esta rama he estado trabajando con archivos de propiedades, esto es muy útil para configurar Spring, podemos agregar nuevos perfiles con configuraciones personalizadas. 
+En este ejemplo agregamos dos nuevos perfiles: dev (para desarrollo) y pdn (para producción), en dev cambiamos el puerto de la aplicación, ahora es 8090. Importante: Todos los perfiles comparten la configuración que definimos en el archivo de propiedades generales llamado application.properties, en este caso cambiamos la ruta de contexto por: /platzi-market/api
