@@ -1,4 +1,4 @@
-# My first hello world in Spring Boot :leaves:
+# hello world en Spring :leaves:
 
-We added a simple controller to display a "hello world" when we access to the path: http://localhost:8080/saludar/hola :fire:
+Un controlador simple para mostrar un texto cuando accedemos a la ruta: http://localhost:8080/saludar/hola 
 
