@@ -16,7 +16,7 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @GetMapping("/all")
+    @GetMapping()
     public ResponseEntity<List<Product>> getAll() {
         return new ResponseEntity<>(productService.getAll(), HttpStatus.OK);
     }
@@ -35,12 +35,12 @@ public class ProductController {
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
-    @PostMapping("/save")
+    @PostMapping()
     public ResponseEntity<Product> save(@RequestBody Product product) {
         return new ResponseEntity<>(productService.save(product), HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable("id") int productId) {
         if (productService.delete(productId)) {
             return new ResponseEntity(HttpStatus.OK);

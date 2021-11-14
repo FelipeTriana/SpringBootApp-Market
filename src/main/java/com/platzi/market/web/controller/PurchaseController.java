@@ -17,7 +17,7 @@ public class PurchaseController {
     @Autowired
     private PurchaseService purchaseService;
 
-    @GetMapping("/all")
+    @GetMapping()
     public ResponseEntity<List<Purchase>> getAll(){
         return new ResponseEntity<>(purchaseService.getAll(), HttpStatus.OK);
     }
@@ -36,14 +36,14 @@ public class PurchaseController {
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
-    @PostMapping("/save")
+    @PostMapping()
     public ResponseEntity<Purchase> save(@RequestBody Purchase purchase) {
         System.out.println(purchase.getClientId());
         //System.out.println(purchase);
         return new ResponseEntity<>(purchaseService.save(purchase), HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable("id") int purchaseId) {
         if (purchaseService.delete(purchaseId)) {
             return new ResponseEntity(HttpStatus.OK);
