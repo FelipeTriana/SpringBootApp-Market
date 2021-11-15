@@ -28,7 +28,7 @@ public class ClientController {
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
-
+//s
     @PostMapping()
     public ResponseEntity<Client> save(@RequestBody Client client) {
         return new ResponseEntity<>(clientService.save(client), HttpStatus.CREATED);
