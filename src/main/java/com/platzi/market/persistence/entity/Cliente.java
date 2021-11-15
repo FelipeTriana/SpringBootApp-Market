@@ -17,6 +17,14 @@ public class Cliente {
     @Column(name = "correo_electronico")
     private String correoElectronico;
 
+    public List<Compra> getCompra() {
+        return compra;
+    }
+
+    public void setCompra(List<Compra> compra) {
+        this.compra = compra;
+    }
+
     @OneToMany(mappedBy = "cliente")
     private List<Compra> compra;
 
